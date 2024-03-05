@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         },
     },
     css: [
-        'public/css/template.css',
+        '~/public/css/template.css',
         '~/assets/css/main.css'
     ],
     app: {
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
             // please note that this is an area that is likely to change
             style: [
                 // <style type="text/css">:root { color: red }</style>
-                {children: ":root { color: red }", type: "text/css"},
+                // {children: ":root  color: red }", type: "text/css"},
             ],
             noscript: [
                 // <noscript>JavaScript is required</noscript>
