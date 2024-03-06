@@ -10,7 +10,8 @@
             </div>
             <div class="post-info">
                 <h2 class="post-title">
-                    <a :href="redirectLink">{{ title }}</a>
+                                        <NuxtLink :to="redirectLink">{{ title }}</NuxtLink>
+<!--                    <a @click.prevent.stop="handleClick(redirectLink)" :href="redirectLink">{{ title }}</a>-->
                 </h2>
                 <div class="index-post-footer">
                     <p class="post-snippet">{{ description }}</p>
@@ -64,4 +65,6 @@ const props = defineProps({
         default: '',
     },
 });
+
+const handleClick = (link) => navigateTo(link);
 </script>

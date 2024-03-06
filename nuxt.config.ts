@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: {enabled: true},
+    // ssr: false,
     postcss: {
         plugins: {
             tailwindcss: {},
@@ -40,7 +41,7 @@ export default defineNuxtConfig({
             ],
             noscript: [
                 // <noscript>JavaScript is required</noscript>
-                {children: "JavaScript is required"},
+                //{children: "JavaScript is required"},
             ],
             bodyAttrs: {
                 class: 'index home'
