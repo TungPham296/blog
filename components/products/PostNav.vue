@@ -37,6 +37,5 @@ const getDataProduct = async (id) => {
 const getLink = (id) => `/products/${id}`;
 const preProduct = await getDataProduct(props.id - 1);
 const nextProduct = await getDataProduct(props.id + 1);
-console.log(preProduct, nextProduct);
 
 </script>

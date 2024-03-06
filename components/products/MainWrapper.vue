@@ -108,8 +108,6 @@ const props = defineProps({
 });
 
 const {data} = await useFetch(`https://fakestoreapi.com/products/${props.id}`);
-console.log(data.value);
-
 const url = useRequestURL()
 const currentLink = url.href;
 
