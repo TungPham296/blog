@@ -7,8 +7,8 @@
     </div>
 </template>
 <script setup lang="ts">
-import MainWrapper from "~/components/products/MainWrapper.vue";
-import SidebarWrapper from "~/components/homes/SidebarWrapper.vue";
+import MainWrapper from "~/components/web/products/MainWrapper.vue";
+import SidebarWrapper from "~/components/web/homes/SidebarWrapper.vue";
 
 const props = defineProps({
     id: {

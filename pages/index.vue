@@ -11,9 +11,9 @@
 </template>
 <script setup>
 
-import ProjectHeader from "~/components/homes/ProjectHeader.vue";
-import HotWrapper from "~/components/homes/HotWarpper.vue";
-import Wave from "~/components/homes/Wave.vue";
-import ContentWrapper from "~/components/homes/ContentWrapper.vue";
-import PopularTags from "~/components/homes/PopularTags.vue";
+import ProjectHeader from "~/components/web/homes/ProjectHeader.vue";
+import HotWrapper from "~/components/web/homes/HotWarpper.vue";
+import Wave from "~/components/web/homes/Wave.vue";
+import ContentWrapper from "~/components/web/homes/ContentWrapper.vue";
+import PopularTags from "~/components/web/homes/PopularTags.vue";
 </script>

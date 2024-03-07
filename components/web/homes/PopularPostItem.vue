@@ -1,19 +1,19 @@
 <template>
     <div class="hot-item-inner">
         <div class="post-image-wrap">
-            <a class="post-image-link" :href="redirectLink">
+            <NuxtLink :to="redirectLink" class="post-image-link">
                 <img class="post-thumb lazy-yard" :alt="imageTitle" :src="imageLink">
-            </a>
+            </NuxtLink>
         </div>
         <div class="post-info">
             <div class="post-info-wrapper">
                 <span class="post-tag">{{ tag }}</span>
                 <h2 class="post-title">
-                    <a :href="redirectLink">{{ title }}</a>
+                    <NuxtLink :to="redirectLink">{{ title }}</NuxtLink>
                 </h2>
                 <div class="post-meta">
                     <span class="post-author">
-                        <a :href="authLink" target="_blank">{{ auth }}</a>
+                        <NuxtLink :to="authLink" target="_blank">{{ auth }}</NuxtLink>
                     </span>
                     <span class="post-date published">{{ date }}</span>
                 </div>

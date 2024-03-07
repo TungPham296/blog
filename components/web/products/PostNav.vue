@@ -1,24 +1,20 @@
 <template>
     <ul class="post-nav">
         <li v-if="nextProduct" class="post-next">
-            <a class="next-post-link"
-               :href="getLink(id + 1)"
-               id="Blog1_blog-pager-newer-link" rel="next">
+            <NuxtLink class="next-post-link" :to="getLink(id + 1)">
                 <div class="post-nav-inner">
                     <span>Newer</span>
                     <p>{{ nextProduct.title }}</p>
                 </div>
-            </a>
+            </NuxtLink>
         </li>
         <li v-if="preProduct" class="post-prev">
-            <a class="prev-post-link"
-               :href="getLink(id - 1)"
-               id="Blog1_blog-pager-older-link" rel="previous">
+            <NuxtLink class="prev-post-link" :to="getLink(id - 1)">
                 <div class="post-nav-inner">
                     <span>Older</span>
                     <p>{{ preProduct.title }}</p>
                 </div>
-            </a>
+            </NuxtLink>
         </li>
     </ul>
 </template>
@@ -30,12 +26,28 @@ const props = defineProps({
     },
 });
 
+const preProduct = ref(null);
+const nextProduct = ref(null);
+const getLink = (id) => `/products/${id}`;
+
 const getDataProduct = async (id) => {
     let {data} = await useFetch(`https://fakestoreapi.com/products/${id}`);
     return data.value;
 }
-const getLink = (id) => `/products/${id}`;
-const preProduct = await getDataProduct(props.id - 1);
-const nextProduct = await getDataProduct(props.id + 1);
+
+const fetchProductData = async () => {
+    const [preProductData, nextProductData] = await Promise.all([
+        getDataProduct(props.id - 1),
+        getDataProduct(props.id + 1)
+    ]);
+
+    return {preProductData, nextProductData};
+}
+
+fetchProductData().then(({preProductData, nextProductData}) => {
+    preProduct.value = preProductData;
+    nextProduct.value = nextProductData;
+});
+
 
 </script>

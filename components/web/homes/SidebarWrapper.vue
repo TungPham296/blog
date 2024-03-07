@@ -16,10 +16,10 @@
 </template>
 <script setup>
 
-import SocialPlugin from "~/components/homes/SocialPlugin.vue";
-import Subscribe from "~/components/homes/Subscribe.vue";
-import MostPopular from "~/components/homes/MostPopular.vue";
-import Facebook from "~/components/homes/Facebook.vue";
-import Tags from "~/components/homes/Tags.vue";
-import Categories from "~/components/homes/Categories.vue";
+import SocialPlugin from "~/components/web/homes/SocialPlugin.vue";
+import Subscribe from "~/components/web/homes/Subscribe.vue";
+import MostPopular from "~/components/web/homes/MostPopular.vue";
+import Facebook from "~/components/web/homes/Facebook.vue";
+import Tags from "~/components/web/homes/Tags.vue";
+import Categories from "~/components/web/homes/Categories.vue";
 </script>

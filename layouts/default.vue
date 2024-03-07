@@ -6,6 +6,6 @@
   </div>
 </template>
 <script setup>
-import AppHeader from "~/components/layouts/AppHeader.vue";
-import AppFooter from "~/components/layouts/AppFooter.vue";
+import AppHeader from "~/components/web/layouts/AppHeader.vue";
+import AppFooter from "~/components/web/layouts/AppFooter.vue";
 </script>

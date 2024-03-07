@@ -1,0 +1,1 @@
+export default () => (useState('loading', () => 0));

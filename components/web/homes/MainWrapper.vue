@@ -39,7 +39,7 @@
 </template>
 <script setup>
 
-import Post from "~/components/homes/Post.vue";
+import Post from "~/components/web/homes/Post.vue";
 
 let limit = ref(6);
 let posts = ref([]);

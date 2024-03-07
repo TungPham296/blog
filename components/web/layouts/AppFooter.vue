@@ -84,7 +84,7 @@
             </div>
             <div class="widget-content">
               <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/public">Home</a></li>
                 <li>
                   <a href="https://wavy-way2themes.blogspot.com/p/about.html"
                     >About</a

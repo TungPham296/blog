@@ -95,10 +95,10 @@
 
 <script setup>
 
-import PostShare from "~/components/products/PostShare.vue";
-import PostNav from "~/components/products/PostNav.vue";
-import RelatedWrap from "~/components/products/RelatedWrap.vue";
-import PostComment from "~/components/products/PostComment.vue";
+import PostShare from "~/components/web/products/PostShare.vue";
+import PostNav from "~/components/web/products/PostNav.vue";
+import RelatedWrap from "~/components/web/products/RelatedWrap.vue";
+import PostComment from "~/components/web/products/PostComment.vue";
 
 const props = defineProps({
     id: {

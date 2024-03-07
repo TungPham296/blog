@@ -8,8 +8,8 @@
 </template>
 <script setup>
 
-import MainWrapper from "~/components/homes/MainWrapper.vue";
-import SidebarWrapper from "~/components/homes/SidebarWrapper.vue";
+import MainWrapper from "~/components/web/homes/MainWrapper.vue";
+import SidebarWrapper from "~/components/web/homes/SidebarWrapper.vue";
 </script>
 <style scoped>
 .videoWrapper {

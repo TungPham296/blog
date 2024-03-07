@@ -6,7 +6,7 @@
                     <ul class="hot-posts multiple">
                         <li class="hot-item" v-for="popularPost in data">
                             <PopularPostItem
-                                :redirect-link="popularPost.image"
+                                :redirect-link="`/products/${popularPost.id}`"
                                 :image-title="popularPost.title"
                                 :image-link="popularPost.image"
                                 :tag="popularPost.category"
@@ -23,7 +23,7 @@
     </div>
 </template>
 <script setup>
-import PopularPostItem from "~/components/homes/PopularPostItem.vue";
+import PopularPostItem from "~/components/web/homes/PopularPostItem.vue";
 
 const {data} = await useFetch('https://fakestoreapi.com/products?limit=4');
 </script>

@@ -2,16 +2,17 @@
     <div class="blog-post hentry index-post post-0">
         <div class="index-post-inside-wrap">
             <div class="post-image-wrap">
-                <a class="post-image-link" :href="redirectLink">
-                    <img :alt="title" class="post-thumb lazy-yard" :src="image"
-                    />
-                </a>
+                <NuxtLink class="post-image-link" :to="redirectLink">
+                    <img :alt="title" class="post-thumb lazy-yard" :src="image"/>
+                </NuxtLink>
+<!--                <a class="" :href="redirectLink">-->
+<!--                    -->
+<!--                </a>-->
                 <a class="post-tag" :href="tagLink">{{ tag }}</a>
             </div>
             <div class="post-info">
                 <h2 class="post-title">
-                                        <NuxtLink :to="redirectLink">{{ title }}</NuxtLink>
-<!--                    <a @click.prevent.stop="handleClick(redirectLink)" :href="redirectLink">{{ title }}</a>-->
+                    <NuxtLink :to="redirectLink">{{ title }}</NuxtLink>
                 </h2>
                 <div class="index-post-footer">
                     <p class="post-snippet">{{ description }}</p>

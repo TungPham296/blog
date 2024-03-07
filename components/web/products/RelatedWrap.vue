@@ -6,11 +6,11 @@
         <div class="related-ready">
             <ul class="related-posts">
                 <li class="related-item item-0" v-for="item in data">
-                    <a class="post-image-link" :href="getLink(item.id)">
+                    <NuxtLink class="post-image-link" :to="getLink(item.id)">
                         <img class="post-thumb lazy-yard" alt="" :src="item.image">
-                    </a>
+                    </NuxtLink>
                     <h2 class="post-title">
-                        <a :href="getLink(item.id)">{{ item.title }}</a>
+                        <NuxtLink :to="getLink(item.id)">{{ item.title }}</NuxtLink>
                     </h2>
                     <div class="post-meta">
                         <span class="post-date">March 17, 2016</span>
