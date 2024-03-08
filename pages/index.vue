@@ -16,4 +16,7 @@ import HotWrapper from "~/components/web/homes/HotWarpper.vue";
 import Wave from "~/components/web/homes/Wave.vue";
 import ContentWrapper from "~/components/web/homes/ContentWrapper.vue";
 import PopularTags from "~/components/web/homes/PopularTags.vue";
+
+setPageLayout('web');
+
 </script>

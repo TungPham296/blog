@@ -1,1 +1,1 @@
-export default () => (useState('loading', () => 0));
+export default () => (useState('loading', () => []));

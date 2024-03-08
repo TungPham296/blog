@@ -299,21 +299,5 @@
         </div>
     </div>
 </template>
-<script setup lang="ts">
-import useAuth from "~/composables/useAuth";
-
-const authStore = useAuth();
-const authCookie = useCookie('auth');
-const handleClickLogout = () => {
-    authStore.value = {
-        name: '',
-        email: '',
-        token: '',
-    };
-    authCookie.value = JSON.stringify({
-        name: '',
-        email: '',
-        token: '',
-    });
-}
+<script setup>
 </script>

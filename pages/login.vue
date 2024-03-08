@@ -45,19 +45,23 @@ const auth = useAuth();
 const authCookie = useCookie('auth');
 const handleSubmitForm = async () => {
 
-    let {data} = await useFetch('https://fakestoreapi.com/auth/login', {
+    let data = await $fetch('https://fakestoreapi.com/auth/login', {
         method: 'post',
         body: {
             username: userName.value,
             password: password.value,
         }
     });
-    console.log(data.value)
-    auth.value.token = data.value.token;
+
+    if (!data){
+        alert('Login false');
+        return;
+    }
+    auth.value.token = data.token;
     authCookie.value = JSON.stringify({
         name: '',
         email: '',
-        token: data.value.token,
+        token: data.token,
     });
     navigateTo('/admin');
 }

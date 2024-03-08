@@ -7,4 +7,7 @@ import ContentWrapper from "~/components/web/products/ContentWrapper.vue";
 const route = useRoute();
 const id = route.params.id;
 
+setPageLayout('web');
+
+
 </script>
