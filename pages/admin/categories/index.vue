@@ -22,8 +22,8 @@
                 </div>
             </div>
         </div>
-
-        <div hidden="" class="card w-100 position-relative overflow-hidden">
+        <div v-if="loadingStore[route.fullPath]">loading...{{loadingStore[route.fullPath]}}</div>
+        <div v-else  class="card w-100 position-relative overflow-hidden">
             <div class="px-4 py-3 border-bottom">
                 <h5 class="card-title fw-semibold mb-0 lh-sm">Danh sách danh muc</h5>
             </div>
@@ -42,7 +42,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr v-for="(category,index) in data">
+                        <tr v-for="(category,index) in categories">
                             <td>
                                 <div class="d-flex align-items-center">
                                     <div class="ms-3">
@@ -81,7 +81,6 @@
                 </div>
             </div>
         </div>
-        <div>loading...</div>
     </div>
 </template>
 <script setup>
@@ -94,13 +93,15 @@ definePageMeta({
 
 const loadingStore = useLoading();
 const route = useRoute();
-const data = ref([]);
+const categories = ref([]);
 onMounted(async () => {
     try {
-        const {data} = await $fetch('https://fakestoreapi.com/products/categories');
+        categories.value = await $fetch('https://fakestoreapi.com/products/categories');
     } catch (error) {
         console.error('Error fetching categories:', error);
     }
 });
+
+console.log('rerender')
 
 </script>

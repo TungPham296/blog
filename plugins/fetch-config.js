@@ -13,13 +13,9 @@ export default defineNuxtPlugin((_nuxtApp) => {
             if (authStore?.value?.token) {
                 options.headers = {Authorization: `Bearer ${authStore.value.token}`}
             }
-            console.log('request');
-            console.log(loadingStore.value);
         },
         onResponse(context) {
             loadingStore.value[route.fullPath] = loadingStore.value[route.fullPath]? loadingStore.value[route.fullPath] - 1 : 0;
-            console.log('onResponse');
-            console.log(loadingStore.value);
         },
         onRequestError({error}) {
             console.error(error)
